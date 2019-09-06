@@ -9,6 +9,8 @@
   <% end %>
 </ul>
 
+<p><%= link_to "See all powers", powers_path %></p>
+
 <%= form_with(url: "/heroines/search", method: "get") do %>
   <%= label_tag(:q, "Search by power:") %>
   <%= text_field_tag(:q) %>
