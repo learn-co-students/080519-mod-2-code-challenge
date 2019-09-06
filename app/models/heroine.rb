@@ -1,4 +1,4 @@
 class Heroine < ApplicationRecord
-    validates :name, uniqueness: true
+    validates :super_name, uniqueness: true
     belongs_to :power
 end
