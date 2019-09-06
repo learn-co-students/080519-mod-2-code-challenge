@@ -8,3 +8,9 @@
     <br>
   <% end %>
 </ul>
+
+<%= form_with(url: "/heroines/search", method: "get") do %>
+  <%= label_tag(:q, "Search by power:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
