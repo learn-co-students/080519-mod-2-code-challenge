@@ -20,6 +20,12 @@ class HeroinesController < ApplicationController
     end
   end
 
+  def search
+    # byebug
+    power = params[:search][:power]
+    @heroines = Heroine.find_by_power(power)
+  end
+
   private
 
   def heroine_params
