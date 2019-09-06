@@ -21,6 +21,10 @@ class HeroinesController < ApplicationController
     end
   end
 
+  def search
+    @heroines = Heroine.where(power_name: params[:power_name])
+  end
+
   private
   
   def heroine_params
