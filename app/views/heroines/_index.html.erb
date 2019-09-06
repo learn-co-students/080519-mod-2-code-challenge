@@ -1,4 +1,6 @@
-<%= form_tag('/search')%>
+<h2>All Heroines</h2>
+
+<%= form_tag('/heroines/search')%>
 <%= label_tag(:search, 'Search by Superpower')%>
 <%= search_field(:search, :power)%>
 <%= submit_tag "Search" %>

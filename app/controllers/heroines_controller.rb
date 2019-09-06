@@ -20,8 +20,21 @@ class HeroinesController < ApplicationController
     end
   end
 
+  def edit
+    @heroine = Heroine.find(params[:id])
+  end
+
+  def update
+    @heroine = Heroine.find_by(name: params[:heroine][:name])
+    @heroine.update(heroine_params)
+    if !@heroine.valid?
+      render :edit
+    else
+      redirect_to @heroine
+    end
+  end
+
   def search
-    # byebug
     power = params[:search][:power]
     @heroines = Heroine.find_by_power(power)
   end
