@@ -1,7 +1,0 @@
-<%= form_for @heroine do |s|%>
-Name: <%= s.text_field :name%><br>
-Super_name:<%=s.text_field :super_name%><br>
-Power: <%= s.collection_select(:power_id, Power.all, :id, :name, prompt:true)%>
-SubmitL <%= s.submit%>
-<%end%> 
- 
